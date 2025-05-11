@@ -1,8 +1,25 @@
 import mongoose, { Document, Schema } from "mongoose";
 
 interface IUser extends Document {
-  title: string;
-  content: string;
+  name: string;
+  gender: string;
+  age: number;
+  yearOfBirth: number;
+  phoneNumber: string;
+  email: string;
+  address: {
+    street: {
+      number: number;
+      name: string;
+    };
+    city: string;
+    state: string;
+    country: string;
+  };
+  picture: {
+    thumbnail: string;
+    large: string;
+  };
 }
 
 const userSchema: Schema = new Schema(
