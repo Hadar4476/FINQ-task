@@ -1,7 +1,7 @@
 How to run:
 
 * please make sure you have the correct .env file from the author or create one for your self with the relative variables.
-* 
+  
 * clone the repository with "git clone https://github.com/Hadar4476/finq-task.git"
 * navigate to the installed project
 * naviagte to the server folder and run "npm i"
