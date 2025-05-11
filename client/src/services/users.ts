@@ -13,6 +13,12 @@ export const fetchRandomUsers = async () => {
   return response.data.results;
 };
 
+export const fetchHistory = async () => {
+  const response = await apiClient.get<IUser[]>(route);
+
+  return response.data;
+};
+
 export const saveUser = async (userData: IUser) => {
   const response = await apiClient.post<IUser>(route, userData);
 
