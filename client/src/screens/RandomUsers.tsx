@@ -6,9 +6,7 @@ import { useNavigate } from "react-router-dom";
 const RandomUsers = () => {
   const navigate = useNavigate();
 
-  const { users, loading, error } = useSelector(
-    (state: RootState) => state.users
-  );
+  const { users } = useSelector((state: RootState) => state.users);
 
   return (
     <div className="container mt-4">

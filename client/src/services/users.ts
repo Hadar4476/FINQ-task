@@ -15,6 +15,8 @@ export const fetchRandomUsers = async () => {
 export const fetchHistory = async () => {
   const response = await apiClient.get<IUser[]>(route);
 
+  console.log({ response });
+
   return response.data;
 };
 
