@@ -28,7 +28,7 @@ const saveUser = async (req: Request, res: Response) => {
 
 const updateUser = async (req: Request, res: Response) => {
   const { userId } = req.params;
-  const { name } = req.body;
+  const { fullname } = req.body;
 
   try {
     const user = await User.findById(userId);
@@ -37,7 +37,7 @@ const updateUser = async (req: Request, res: Response) => {
       throw new Error("User was not found");
     }
 
-    user.name = name;
+    user.fullname = fullname;
 
     const updatedUser = await user.save();
 

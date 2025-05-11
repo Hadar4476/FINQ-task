@@ -1,5 +1,6 @@
 export interface IUser {
-  _id: string;
+  _id?: string;
+  uuid: string;
   fullname: string;
   gender: string;
   age: number;
@@ -19,6 +20,7 @@ export interface IUser {
     thumbnail: string;
     large: string;
   };
+  isSaved: boolean;
 }
 
 export interface IUsersState {
