@@ -69,6 +69,8 @@ const usersSlice = createSlice({
         state.error = "";
       })
       .addCase(getRandomUsers.fulfilled, (state, action) => {
+        console.log("Reached");
+
         const mappedUsers: IUser[] = action.payload.map((result) => {
           const { login, name, gender, dob, phone, email, location, picture } =
             result;

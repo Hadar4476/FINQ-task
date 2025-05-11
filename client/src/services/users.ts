@@ -2,13 +2,12 @@ import axios from "axios";
 
 import apiClient from "../api-client";
 
-import config from "../config";
 import { IUser } from "../types/users";
 
 const route = "/users";
 
 export const fetchRandomUsers = async () => {
-  const response = await axios.get(config.randomUserApiUrl);
+  const response = await axios.get("https://randomuser.me/api/?results=10");
 
   return response.data.results;
 };
